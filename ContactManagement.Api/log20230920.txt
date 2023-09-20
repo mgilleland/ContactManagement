@@ -1,0 +1,429 @@
+2023-09-20 11:01:21.353 -04:00 [INF] Registered 2 endpoints in 642 milliseconds.
+2023-09-20 11:01:21.652 -04:00 [INF] No validators found in the system!
+2023-09-20 11:01:22.363 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 11:01:22.546 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 11:01:22.789 -04:00 [INF] Now listening on: https://localhost:7143
+2023-09-20 11:01:22.791 -04:00 [INF] Now listening on: http://localhost:5252
+2023-09-20 11:01:22.792 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-20 11:01:22.793 -04:00 [INF] Hosting environment: Development
+2023-09-20 11:01:22.794 -04:00 [INF] Content root path: C:\Users\mgill\source\repos\ContactManagement\ContactManagement.Api
+2023-09-20 11:01:23.788 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2023-09-20 11:01:24.283 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2023-09-20 11:01:24.285 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2023-09-20 11:01:24.288 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;+charset=utf-8 496.2872ms
+2023-09-20 11:01:24.301 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 17.1744ms
+2023-09-20 11:01:24.323 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.9090ms
+2023-09-20 11:01:24.365 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2023-09-20 11:01:24.396 -04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-20 11:01:24.993 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 628.6763ms
+2023-09-20 11:01:52.119 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 320
+2023-09-20 11:01:52.122 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 11:51:25.915 -04:00 [INF] Registered 2 endpoints in 221 milliseconds.
+2023-09-20 11:51:26.076 -04:00 [INF] No validators found in the system!
+2023-09-20 11:51:26.603 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 11:51:26.727 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 11:51:26.854 -04:00 [INF] Now listening on: https://localhost:7143
+2023-09-20 11:51:26.855 -04:00 [INF] Now listening on: http://localhost:5252
+2023-09-20 11:51:26.856 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-20 11:51:26.857 -04:00 [INF] Hosting environment: Development
+2023-09-20 11:51:26.858 -04:00 [INF] Content root path: C:\Users\mgill\source\repos\ContactManagement\ContactManagement.Api
+2023-09-20 11:51:27.807 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2023-09-20 11:51:28.092 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;+charset=utf-8 288.7871ms
+2023-09-20 11:51:28.093 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2023-09-20 11:51:28.093 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2023-09-20 11:51:28.111 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 17.7726ms
+2023-09-20 11:51:28.117 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.2556ms
+2023-09-20 11:51:28.169 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2023-09-20 11:51:28.179 -04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-20 11:51:28.680 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 511.1774ms
+2023-09-20 11:51:41.833 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 246
+2023-09-20 11:51:41.839 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 12:02:10.979 -04:00 [INF] Registered 2 endpoints in 219 milliseconds.
+2023-09-20 12:02:11.122 -04:00 [INF] No validators found in the system!
+2023-09-20 12:02:11.684 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 12:02:11.822 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 12:02:11.953 -04:00 [INF] Now listening on: https://localhost:7143
+2023-09-20 12:02:11.954 -04:00 [INF] Now listening on: http://localhost:5252
+2023-09-20 12:02:11.955 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-20 12:02:11.956 -04:00 [INF] Hosting environment: Development
+2023-09-20 12:02:11.956 -04:00 [INF] Content root path: C:\Users\mgill\source\repos\ContactManagement\ContactManagement.Api
+2023-09-20 12:02:13.302 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2023-09-20 12:02:13.675 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2023-09-20 12:02:13.675 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2023-09-20 12:02:13.675 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;+charset=utf-8 375.5444ms
+2023-09-20 12:02:13.696 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 21.1352ms
+2023-09-20 12:02:13.702 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.5744ms
+2023-09-20 12:02:13.770 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2023-09-20 12:02:13.785 -04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-20 12:02:14.421 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 651.2557ms
+2023-09-20 12:02:18.436 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 246
+2023-09-20 12:02:18.441 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 12:04:37.401 -04:00 [INF] Registered 2 endpoints in 217 milliseconds.
+2023-09-20 12:04:37.537 -04:00 [INF] No validators found in the system!
+2023-09-20 12:05:24.509 -04:00 [INF] Registered 2 endpoints in 214 milliseconds.
+2023-09-20 12:05:24.634 -04:00 [INF] No validators found in the system!
+2023-09-20 12:05:25.199 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 12:05:25.349 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 12:05:25.405 -04:00 [FTL] Application startup exception
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Microsoft.AspNetCore.Authorization.DefaultAuthorizationPolicyProvider.
+ ---> Autofac.Core.DependencyResolutionException: An exception was thrown while invoking the constructor 'Void .ctor(Microsoft.Extensions.Options.IOptions`1[Microsoft.AspNetCore.Authorization.AuthorizationOptions])' on type 'DefaultAuthorizationPolicyProvider'.
+ ---> System.InvalidOperationException: Endpoints are not initialized! This usually happens when 'app.UseFastEndpoints()' is placed after 'app.MapControllers()'. Try changing the middleware order.
+   at FastEndpoints.MainExtensions.BuildSecurityPoliciesForEndpoints(AuthorizationOptions opts, EndpointData epData)
+   at FastEndpoints.MainExtensions.<>c__DisplayClass0_0.<AddFastEndpoints>b__0(AuthorizationOptions o)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authorization.DefaultAuthorizationPolicyProvider..ctor(IOptions`1 options)
+   at lambda_method19(Closure, Object[])
+   at Autofac.Core.Activators.Reflection.BoundConstructor.Instantiate()
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Activators.Reflection.BoundConstructor.Instantiate()
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DelegateMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.RegistrationPipelineInvokeMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext context)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest request)
+   at Autofac.Core.Container.ResolveComponent(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2023-09-20 12:06:56.466 -04:00 [INF] Registered 2 endpoints in 318 milliseconds.
+2023-09-20 12:06:56.581 -04:00 [INF] No validators found in the system!
+2023-09-20 12:06:57.125 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 12:06:57.270 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 12:06:57.337 -04:00 [FTL] Application startup exception
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Microsoft.AspNetCore.Authorization.DefaultAuthorizationPolicyProvider.
+ ---> Autofac.Core.DependencyResolutionException: An exception was thrown while invoking the constructor 'Void .ctor(Microsoft.Extensions.Options.IOptions`1[Microsoft.AspNetCore.Authorization.AuthorizationOptions])' on type 'DefaultAuthorizationPolicyProvider'.
+ ---> System.InvalidOperationException: Endpoints are not initialized! This usually happens when 'app.UseFastEndpoints()' is placed after 'app.MapControllers()'. Try changing the middleware order.
+   at FastEndpoints.MainExtensions.BuildSecurityPoliciesForEndpoints(AuthorizationOptions opts, EndpointData epData)
+   at FastEndpoints.MainExtensions.<>c__DisplayClass0_0.<AddFastEndpoints>b__0(AuthorizationOptions o)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authorization.DefaultAuthorizationPolicyProvider..ctor(IOptions`1 options)
+   at lambda_method20(Closure, Object[])
+   at Autofac.Core.Activators.Reflection.BoundConstructor.Instantiate()
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Activators.Reflection.BoundConstructor.Instantiate()
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DelegateMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.RegistrationPipelineInvokeMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext context)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest request)
+   at Autofac.Core.Container.ResolveComponent(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2023-09-20 12:11:13.307 -04:00 [INF] Registered 2 endpoints in 244 milliseconds.
+2023-09-20 12:11:13.424 -04:00 [INF] No validators found in the system!
+2023-09-20 12:11:13.975 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 12:11:14.106 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 12:11:14.239 -04:00 [INF] Now listening on: https://localhost:7143
+2023-09-20 12:11:14.240 -04:00 [INF] Now listening on: http://localhost:5252
+2023-09-20 12:11:14.242 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-20 12:11:14.243 -04:00 [INF] Hosting environment: Development
+2023-09-20 12:11:14.244 -04:00 [INF] Content root path: C:\Users\mgill\source\repos\ContactManagement\ContactManagement.Api
+2023-09-20 12:11:15.364 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2023-09-20 12:11:15.689 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;+charset=utf-8 326.0032ms
+2023-09-20 12:11:15.719 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2023-09-20 12:11:15.719 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2023-09-20 12:11:15.738 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 18.9951ms
+2023-09-20 12:11:15.744 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.7815ms
+2023-09-20 12:11:15.790 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2023-09-20 12:11:15.801 -04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-20 12:11:16.304 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 513.5370ms
+2023-09-20 12:11:21.913 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 246
+2023-09-20 12:11:21.919 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 12:28:46.964 -04:00 [INF] Registered 2 endpoints in 220 milliseconds.
+2023-09-20 12:28:47.113 -04:00 [INF] No validators found in the system!
+2023-09-20 12:28:47.635 -04:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 12:28:47.821 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 12:28:47.949 -04:00 [INF] Now listening on: https://localhost:7143
+2023-09-20 12:28:47.950 -04:00 [INF] Now listening on: http://localhost:5252
+2023-09-20 12:28:47.951 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-20 12:28:47.952 -04:00 [INF] Hosting environment: Development
+2023-09-20 12:28:47.952 -04:00 [INF] Content root path: C:\Users\mgill\source\repos\ContactManagement\ContactManagement.Api
+2023-09-20 12:28:49.158 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2023-09-20 12:28:49.450 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;+charset=utf-8 295.1514ms
+2023-09-20 12:28:49.455 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2023-09-20 12:28:49.455 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2023-09-20 12:28:49.479 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 24.0445ms
+2023-09-20 12:28:49.484 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.1293ms
+2023-09-20 12:28:49.565 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2023-09-20 12:28:49.576 -04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-20 12:28:50.132 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 566.4689ms
+2023-09-20 12:28:58.894 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 302
+2023-09-20 12:28:58.899 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 12:42:33.085 -04:00 [INF] Registered 2 endpoints in 239 milliseconds.
+2023-09-20 12:42:33.185 -04:00 [INF] No validators found in the system!
+2023-09-20 12:42:33.705 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 12:42:33.854 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 12:42:34.021 -04:00 [INF] Now listening on: https://localhost:7143
+2023-09-20 12:42:34.021 -04:00 [INF] Now listening on: http://localhost:5252
+2023-09-20 12:42:34.022 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-20 12:42:34.023 -04:00 [INF] Hosting environment: Development
+2023-09-20 12:42:34.024 -04:00 [INF] Content root path: C:\Users\mgill\source\repos\ContactManagement\ContactManagement.Api
+2023-09-20 12:42:35.406 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2023-09-20 12:42:35.690 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2023-09-20 12:42:35.690 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2023-09-20 12:42:35.692 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;+charset=utf-8 280.9729ms
+2023-09-20 12:42:35.708 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 20.9946ms
+2023-09-20 12:42:35.715 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.2782ms
+2023-09-20 12:42:35.770 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2023-09-20 12:42:35.781 -04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-20 12:42:36.277 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 506.6030ms
+2023-09-20 12:43:03.467 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/listservices - -
+2023-09-20 12:43:03.487 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/listservices - - - 200 - - 20.6236ms
+2023-09-20 12:43:03.567 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/favicon.ico - -
+2023-09-20 12:43:03.569 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/favicon.ico - - - 404 0 - 1.7310ms
+2023-09-20 12:43:54.580 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 246
+2023-09-20 12:43:54.590 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 13:18:14.615 -04:00 [INF] Registered 2 endpoints in 227 milliseconds.
+2023-09-20 13:18:14.718 -04:00 [INF] No validators found in the system!
+2023-09-20 13:18:15.223 -04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 13:18:15.373 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 13:18:15.507 -04:00 [INF] Now listening on: https://localhost:7143
+2023-09-20 13:18:15.507 -04:00 [INF] Now listening on: http://localhost:5252
+2023-09-20 13:18:15.508 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-20 13:18:15.509 -04:00 [INF] Hosting environment: Development
+2023-09-20 13:18:15.510 -04:00 [INF] Content root path: C:\Users\mgill\source\repos\ContactManagement\ContactManagement.Api
+2023-09-20 13:18:16.617 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2023-09-20 13:18:16.910 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;+charset=utf-8 297.7670ms
+2023-09-20 13:18:16.912 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2023-09-20 13:18:16.912 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2023-09-20 13:18:16.933 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 21.0697ms
+2023-09-20 13:18:16.937 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.4335ms
+2023-09-20 13:18:16.991 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2023-09-20 13:18:17.002 -04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-20 13:18:17.493 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 502.1222ms
+2023-09-20 13:18:21.522 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 246
+2023-09-20 13:18:21.526 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 13:21:48.760 -04:00 [INF] Registered 2 endpoints in 218 milliseconds.
+2023-09-20 13:21:49.391 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 13:21:49.525 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 13:21:49.666 -04:00 [INF] Now listening on: https://localhost:7143
+2023-09-20 13:21:49.668 -04:00 [INF] Now listening on: http://localhost:5252
+2023-09-20 13:21:49.670 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-20 13:21:49.671 -04:00 [INF] Hosting environment: Development
+2023-09-20 13:21:49.671 -04:00 [INF] Content root path: C:\Users\mgill\source\repos\ContactManagement\ContactManagement.Api
+2023-09-20 13:21:50.917 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2023-09-20 13:21:51.199 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;+charset=utf-8 282.8455ms
+2023-09-20 13:21:51.200 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2023-09-20 13:21:51.200 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2023-09-20 13:21:51.215 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 14.5710ms
+2023-09-20 13:21:51.221 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.3062ms
+2023-09-20 13:21:51.278 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2023-09-20 13:21:51.294 -04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-20 13:21:58.711 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 7432.9773ms
+2023-09-20 13:22:03.526 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 242
+2023-09-20 13:22:03.530 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 13:23:02.225 -04:00 [INF] Registered 2 endpoints in 260 milliseconds.
+2023-09-20 13:23:02.887 -04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 13:23:03.022 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 13:23:03.167 -04:00 [INF] Now listening on: https://localhost:7143
+2023-09-20 13:23:03.167 -04:00 [INF] Now listening on: http://localhost:5252
+2023-09-20 13:23:03.168 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-20 13:23:03.169 -04:00 [INF] Hosting environment: Development
+2023-09-20 13:23:03.169 -04:00 [INF] Content root path: C:\Users\mgill\source\repos\ContactManagement\ContactManagement.Api
+2023-09-20 13:23:04.441 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2023-09-20 13:23:04.719 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2023-09-20 13:23:04.719 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2023-09-20 13:23:04.719 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;+charset=utf-8 277.6895ms
+2023-09-20 13:23:04.737 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 18.7833ms
+2023-09-20 13:23:04.743 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.3396ms
+2023-09-20 13:23:04.798 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2023-09-20 13:23:04.807 -04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-20 13:23:08.171 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 3373.1708ms
+2023-09-20 13:23:22.047 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 243
+2023-09-20 13:23:22.053 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 13:23:40.130 -04:00 [INF] Executed endpoint 'HTTP: POST /Contacts'
+2023-09-20 13:23:40.135 -04:00 [INF] Request finished HTTP/2 POST https://localhost:7143/Contacts application/json 243 - 400 - application/problem+json 18087.5498ms
+2023-09-20 13:45:46.404 -04:00 [INF] Registered 2 endpoints in 286 milliseconds.
+2023-09-20 13:45:47.089 -04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 13:45:47.237 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 13:45:47.390 -04:00 [INF] Now listening on: https://localhost:7143
+2023-09-20 13:45:47.390 -04:00 [INF] Now listening on: http://localhost:5252
+2023-09-20 13:45:47.392 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-20 13:45:47.393 -04:00 [INF] Hosting environment: Development
+2023-09-20 13:45:47.393 -04:00 [INF] Content root path: C:\Users\mgill\source\repos\ContactManagement\ContactManagement.Api
+2023-09-20 13:45:48.975 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2023-09-20 13:45:49.372 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;+charset=utf-8 398.5096ms
+2023-09-20 13:45:49.373 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2023-09-20 13:45:49.373 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2023-09-20 13:45:49.441 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 68.4952ms
+2023-09-20 13:45:49.459 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 86.0347ms
+2023-09-20 13:45:49.525 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2023-09-20 13:45:49.552 -04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-20 13:45:50.322 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 797.1482ms
+2023-09-20 13:47:03.161 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 686
+2023-09-20 13:47:03.167 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 13:47:03.273 -04:00 [INF] Executed endpoint 'HTTP: POST /Contacts'
+2023-09-20 13:47:03.283 -04:00 [INF] Request finished HTTP/2 POST https://localhost:7143/Contacts application/json 686 - 400 - application/problem+json 121.5880ms
+2023-09-20 13:48:08.221 -04:00 [INF] Registered 2 endpoints in 312 milliseconds.
+2023-09-20 13:48:08.988 -04:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 13:48:09.156 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 13:48:09.325 -04:00 [INF] Now listening on: https://localhost:7143
+2023-09-20 13:48:09.328 -04:00 [INF] Now listening on: http://localhost:5252
+2023-09-20 13:48:09.329 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-20 13:48:09.330 -04:00 [INF] Hosting environment: Development
+2023-09-20 13:48:09.331 -04:00 [INF] Content root path: C:\Users\mgill\source\repos\ContactManagement\ContactManagement.Api
+2023-09-20 13:48:10.642 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2023-09-20 13:48:10.969 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;+charset=utf-8 327.3618ms
+2023-09-20 13:48:10.972 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2023-09-20 13:48:10.972 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2023-09-20 13:48:11.004 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 32.0765ms
+2023-09-20 13:48:11.009 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 37.7122ms
+2023-09-20 13:48:11.069 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2023-09-20 13:48:11.084 -04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-20 13:48:11.750 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 680.8560ms
+2023-09-20 13:48:19.603 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/Contacts - -
+2023-09-20 13:48:19.609 -04:00 [INF] Executing endpoint 'HTTP: GET /Contacts'
+2023-09-20 13:48:19.755 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Age", "c"."FirstName", "c"."LastName", "c"."Address_City", "c"."Address_Line1", "c"."Address_Line2", "c"."Address_State", "c"."Address_Zip", "c"."PhoneNumber_Extension", "c"."PhoneNumber_PhoneNumber"
+FROM "Contacts" AS "c"
+2023-09-20 13:48:19.846 -04:00 [INF] Executed endpoint 'HTTP: GET /Contacts'
+2023-09-20 13:48:19.856 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/Contacts - - - 200 - application/json 253.2785ms
+2023-09-20 13:49:56.990 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 239
+2023-09-20 13:49:56.998 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 13:49:57.097 -04:00 [INF] Executed endpoint 'HTTP: POST /Contacts'
+2023-09-20 13:49:57.099 -04:00 [INF] Request finished HTTP/2 POST https://localhost:7143/Contacts application/json 239 - 400 - application/problem+json 109.5924ms
+2023-09-20 13:50:15.679 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 238
+2023-09-20 13:50:15.680 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 13:50:15.683 -04:00 [INF] Executed endpoint 'HTTP: POST /Contacts'
+2023-09-20 13:50:15.685 -04:00 [INF] Request finished HTTP/2 POST https://localhost:7143/Contacts application/json 238 - 400 - application/problem+json 6.4371ms
+2023-09-20 13:50:28.383 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 238
+2023-09-20 13:50:28.385 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 14:55:42.272 -04:00 [INF] Registered 2 endpoints in 257 milliseconds.
+2023-09-20 14:55:42.811 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-09-20 14:55:42.937 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contacts" AS "c")
+2023-09-20 14:55:43.086 -04:00 [INF] Now listening on: https://localhost:7143
+2023-09-20 14:55:43.087 -04:00 [INF] Now listening on: http://localhost:5252
+2023-09-20 14:55:43.088 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-20 14:55:43.089 -04:00 [INF] Hosting environment: Development
+2023-09-20 14:55:43.090 -04:00 [INF] Content root path: C:\Users\mgill\source\repos\ContactManagement\ContactManagement.Api
+2023-09-20 14:55:44.516 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2023-09-20 14:55:44.826 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2023-09-20 14:55:44.826 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2023-09-20 14:55:44.827 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;+charset=utf-8 314.5088ms
+2023-09-20 14:55:44.855 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 27.7986ms
+2023-09-20 14:55:44.860 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.5804ms
+2023-09-20 14:55:44.910 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2023-09-20 14:55:44.923 -04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-20 14:55:45.470 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 559.7879ms
+2023-09-20 14:56:01.788 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7143/Contacts application/json 243
+2023-09-20 14:56:01.793 -04:00 [INF] Executing endpoint 'HTTP: POST /Contacts'
+2023-09-20 14:56:34.013 -04:00 [INF] Executed DbCommand (42ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 6), @p2='?' (Size = 6), @p3='?' (Size = 6), @p4='?' (Size = 6), @p5='?' (Size = 6), @p6='?' (Size = 2), @p7='?' (Size = 5), @p8='?' (Size = 2), @p9='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contacts" ("Age", "FirstName", "LastName", "Address_City", "Address_Line1", "Address_Line2", "Address_State", "Address_Zip", "PhoneNumber_Extension", "PhoneNumber_PhoneNumber")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id";
+2023-09-20 14:56:43.541 -04:00 [INF] Executed endpoint 'HTTP: POST /Contacts'
+2023-09-20 14:56:43.548 -04:00 [INF] Request finished HTTP/2 POST https://localhost:7143/Contacts application/json 243 - 200 - application/json 41760.4428ms
+2023-09-20 14:57:00.381 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7143/Contacts - -
+2023-09-20 14:57:00.382 -04:00 [INF] Executing endpoint 'HTTP: GET /Contacts'
+2023-09-20 14:57:00.446 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Age", "c"."FirstName", "c"."LastName", "c"."Address_City", "c"."Address_Line1", "c"."Address_Line2", "c"."Address_State", "c"."Address_Zip", "c"."PhoneNumber_Extension", "c"."PhoneNumber_PhoneNumber"
+FROM "Contacts" AS "c"
+2023-09-20 14:57:00.464 -04:00 [INF] Executed endpoint 'HTTP: GET /Contacts'
+2023-09-20 14:57:00.466 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7143/Contacts - - - 200 - application/json 85.3599ms
