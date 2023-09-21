@@ -10,7 +10,7 @@ public class CreateContactMapper : Mapper<CreateContactRequest, CreateContactRes
 {
     // Hard-coding country code to only accept US numbers
     public override Contact ToEntity(CreateContactRequest request) => new(request.FirstName, request.LastName,
-        request.Address, new PhoneNumberType("1", request.PhoneNumber, request.Extension), request.Age);
+        request.Address, new PhoneNumberType(request.PhoneNumber, request.Extension), request.Age);
 
     public override CreateContactResponse FromEntity(Contact c) =>
         new(new ContactRecord(c.Id, c.FirstName, c.LastName, c.Address, c.PhoneNumber, c.Age));

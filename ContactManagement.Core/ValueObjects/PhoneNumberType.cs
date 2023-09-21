@@ -20,6 +20,14 @@ public class PhoneNumberType : ValueObject
         Extension = extension;
     }
 
+    // Default the country code to USA
+    public PhoneNumberType(string phoneNumber, string? extension)
+    {
+        CountryCode = "1";
+        PhoneNumber = phoneNumber;
+        Extension = extension;
+    }
+
     public override string ToString()
     {
         var formattedNumber = Convert.ToInt64(PhoneNumber).ToString("###-###-####");
