@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <Folder Include="Models\ContactModels\Delete\" />
-    <Folder Include="Models\ContactModels\GetById\" />
     <Folder Include="Models\ContactModels\Update\" />
   </ItemGroup>
 

@@ -1,14 +1,11 @@
 ﻿using ContactManagement.Core.Aggregates;
-using FastEndpoints;
-using MediatR;
-using System;
 using ContactManagement.Core.ValueObjects;
+using FastEndpoints;
 
 namespace ContactManagement.BlazorShared.Models.ContactModels.Create;
 
 public class CreateContactMapper : Mapper<CreateContactRequest, CreateContactResponse, Contact>
 {
-    // Hard-coding country code to only accept US numbers
     public override Contact ToEntity(CreateContactRequest request) => new(request.FirstName, request.LastName,
         request.Address, new PhoneNumberType(request.PhoneNumber, request.Extension), request.Age);
 

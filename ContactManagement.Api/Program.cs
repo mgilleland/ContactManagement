@@ -11,6 +11,8 @@ using FastEndpoints.Swagger;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
+//TODO: Clean this up
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());

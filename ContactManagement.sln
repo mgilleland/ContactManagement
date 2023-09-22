@@ -5,13 +5,13 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactManagement.Core", "ContactManagement.Core\ContactManagement.Core.csproj", "{AF62BC64-38C4-440B-9227-5E80642EBE6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManagement.Infrastructure", "ContactManagement.Infrastructure\ContactManagement.Infrastructure.csproj", "{54196B86-2209-4C73-89CB-B0B615A2F115}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactManagement.Infrastructure", "ContactManagement.Infrastructure\ContactManagement.Infrastructure.csproj", "{54196B86-2209-4C73-89CB-B0B615A2F115}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{29E9D413-BB38-4B2D-8BE5-4981B2298665}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{51784971-5BDF-4D2B-96E3-6AC8FF88AA83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManagement.Api", "ContactManagement.Api\ContactManagement.Api.csproj", "{39140752-1114-4E5B-A613-47F258C9D7B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactManagement.Api", "ContactManagement.Api\ContactManagement.Api.csproj", "{39140752-1114-4E5B-A613-47F258C9D7B4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactManagement.BlazorShared", "ContactManagement.BlazorShared\ContactManagement.BlazorShared.csproj", "{BAC98364-8DFF-45D8-8CFD-EEF851061378}"
 EndProject
