@@ -23,6 +23,11 @@ public class AddressType : ValueObject
         Zip = zip;
     }
 
+    public override string ToString()
+    {
+        return Line2 == null ? $"{Line1} {City} {State}, {Zip}" : $"{Line1} {Line2} {City} {State}, {Zip}";
+    }
+
     protected override IEnumerable<object> GetEqualityComponents()
     {
         yield return Line1;

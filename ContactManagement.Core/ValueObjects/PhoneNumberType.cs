@@ -5,32 +5,39 @@ namespace ContactManagement.Core.ValueObjects;
 
 public class PhoneNumberType : ValueObject
 {
-    public string CountryCode { get; }
-    public string PhoneNumber { get; }
-    public string? Extension { get; }
+    private readonly string _countryCode = "1";  // Country Code is hard coded to 1 for now to enforce US only numbers
+
+    public string CountryCode
+    {
+        get => _countryCode;
+        // ReSharper disable once ValueParameterNotUsed
+        private init => _countryCode = "1";
+    }
+    public string PhoneNumber { get; init; }
+    public string? Extension { get; init; }
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     public PhoneNumberType() { } // This is for EF Only
 #pragma warning restore CS8618 // 
 
+    // Default the country code to USA
+    // ReSharper disable once UnusedParameter.Local
     public PhoneNumberType(string countryCode, string phoneNumber, string? extension)
     {
-        CountryCode = countryCode;
-        PhoneNumber = phoneNumber;
-        Extension = extension;
-    }
-
-    // Default the country code to USA
-    public PhoneNumberType(string phoneNumber, string? extension)
-    {
-        CountryCode = "1";
+        //CountryCode = "1";  // Country Code is hard coded to 1 for now to enforce US only numbers
         PhoneNumber = phoneNumber;
         Extension = extension;
     }
 
     public override string ToString()
     {
-        var formattedNumber = Convert.ToInt64(PhoneNumber).ToString("###-###-####");
+        string formattedNumber = PhoneNumber;
+
+        if (long.TryParse(PhoneNumber, out long number))
+        {
+            formattedNumber = Convert.ToInt64(number).ToString("###-###-####");
+        }
+
         var phone = new StringBuilder($"+{CountryCode} {formattedNumber}");
 
         if (Extension != null)

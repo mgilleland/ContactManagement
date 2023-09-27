@@ -1,0 +1,44 @@
+﻿@page "/DeleteContact/{Id:int}"
+
+@using ContactManagement.Client.Shared.IconComponent
+
+<h1>Delete Contact</h1>
+
+@if (Contact != null)
+{
+    <h5>You are about to delete this contact:</h5>
+
+    <p/>
+    <div>
+        @Contact.FirstName @Contact.LastName
+    </div>
+    <div>
+        @Contact.Address
+    </div>
+    <div>
+        @Contact.PhoneNumber
+    </div>
+    <div>
+        Age: @Contact.Age
+    </div>
+    <p/>
+
+    <div class="form-group mb-3">
+        <button class="btn btn-primary" @onclick="Delete">
+            <SaveIcon/> Confirm Delete
+        </button>
+        <button class="btn btn-light" @onclick="Cancel">
+            <CancelIcon/> Cancel
+        </button>
+    </div>
+}
+else
+{
+    <h5>ERROR: Contact was not found</h5>
+
+    <div class="form-group mb-3">
+        <button class="btn btn-light" @onclick="Cancel">
+            <CancelIcon /> Return
+        </button>
+    </div>
+}

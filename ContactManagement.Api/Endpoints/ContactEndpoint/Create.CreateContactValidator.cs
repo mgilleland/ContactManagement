@@ -1,9 +1,10 @@
-﻿using ContactManagement.Core.Aggregates;
+﻿using ContactManagement.BlazorShared.Models.ContactModels.Create;
+using ContactManagement.Core.Aggregates;
 using ContactManagement.Core.ValueObjects;
 using FastEndpoints;
 using FluentValidation;
 
-namespace ContactManagement.BlazorShared.Models.ContactModels.Create;
+namespace ContactManagement.Api.Endpoints.ContactEndpoint;
 
 public class CreateContactValidator : Validator<CreateContactRequest>
 {
@@ -27,11 +28,12 @@ public class CreateContactValidator : Validator<CreateContactRequest>
             .Matches(AddressType.StateValidator);
         RuleFor(c => c.Address.Zip)
             .Matches(AddressType.ZipValidator);
-        RuleFor(c => c.PhoneNumber)
+        RuleFor(c => c.PhoneNumber.PhoneNumber)
             .Matches(PhoneNumberType.PhoneNumberValidator);
-        RuleFor(c => c.Extension)
+        RuleFor(c => c.PhoneNumber.Extension)
             .Matches(PhoneNumberType.ExtensionValidator);
         RuleFor(c => c.Age)
             .InclusiveBetween(0, Contact.MaxAge);
     }
+
 }

@@ -10,7 +10,6 @@ public class CreateContactRequest
     public required string LastName { get; set; }
 
     public required AddressType Address { get; set; }
-    public required string PhoneNumber { get; set; }
-    public string? Extension { get; set; }
+    public required PhoneNumberType PhoneNumber { get; set; }
     public int Age { get; set; }
 }

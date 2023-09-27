@@ -1,0 +1,54 @@
+﻿@page "/ContactList"
+
+@using ContactManagement.Client.Shared.IconComponent
+
+<h1>Contacts</h1>
+
+<div class="main-action">
+    <a href="AddContact" class="btn btn-primary">
+        <span class="oi oi-plus" aria-hidden="true"></span> Add
+    </a>
+</div>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Age</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var contact in Contacts)
+    {
+        <tr>
+            <td>
+                @contact.FirstName @contact.LastName
+            </td>
+            <td>
+                @contact.Address
+            </td>
+            <td>
+                @contact.PhoneNumber
+            </td>
+            <td>
+                @contact.Age
+            </td>
+            <td class="action-buttons">
+                <a href="EditContact/@contact.Id" class="btn btn-primary margin-5">
+                    <EditIcon />
+                    Edit
+                </a>
+
+                    <a href="DeleteContact/@contact.Id" class="btn btn-danger margin-5">
+                    <DeleteIcon />
+                    Delete
+                </a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -5,7 +5,7 @@ using FastEndpoints;
 
 namespace ContactManagement.Api.Endpoints.ContactEndpoint;
 
-public class List : EndpointWithoutRequest<ListContactResponse>
+public class List : EndpointWithoutRequest<ListContactResponse, ContactMapper>
 {
     private readonly IRepository<Contact> _repository;
 
@@ -22,6 +22,9 @@ public class List : EndpointWithoutRequest<ListContactResponse>
 
     public override async Task HandleAsync(CancellationToken cancellationToken)
     {
-        Response.Contacts = await _repository.ListAsync(cancellationToken);
+        var contacts = await _repository.ListAsync(cancellationToken);
+
+        Response.Contacts = contacts
+            .Select(c => Map.FromEntity(c)).ToList();
     }
 }

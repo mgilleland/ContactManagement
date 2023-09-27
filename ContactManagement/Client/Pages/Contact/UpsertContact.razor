@@ -1,0 +1,101 @@
+﻿@page "/AddContact"
+@page "/EditContact/{Id:int}"
+
+@using Blazored.FluentValidation
+@using ContactManagement.Client.Shared.IconComponent
+
+<h1>@_title Contact</h1>
+
+@if (_isContactNotFound)
+{
+    <h5>ERROR: Contact was not found</h5>
+
+    <div class="form-group mb-3">
+        <button class="btn btn-light" @onclick="Cancel">
+            <CancelIcon /> Return
+        </button>
+    </div>
+}
+else
+{
+    <EditForm Model="Contact" OnValidSubmit="SaveContact">
+        <FluentValidationValidator/>
+        <ValidationSummary/>
+        <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <div class="col-md-6">
+                <input form="FirstName" class="form-control" @bind="@Contact.FirstName"/>
+            </div>
+            <ValidationMessage For="@(() => Contact.FirstName)"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <div class="col-md-6">
+                <input form="LastName" class="form-control" @bind="@Contact.LastName"/>
+            </div>
+            <ValidationMessage For="@(() => Contact.LastName)"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Address Line 1</label>
+            <div class="col-md-6">
+                <input form="Line1" class="form-control" @bind="@Contact.Line1"/>
+            </div>
+            <ValidationMessage For="@(() => Contact.Line1)"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Address Line 2</label>
+            <div class="col-md-6">
+                <input form="Line2" class="form-control" @bind="@Contact.Line2"/>
+            </div>
+            <ValidationMessage For="@(() => Contact.Line2)"/>
+        </div>
+        <div class="mb-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="form-label">City</label>
+                    <input form="City" class="form-control" @bind="@Contact.City"/>
+                </div>
+                <div class="col-md-1">
+                    <label class="form-label">State</label>
+                    <input form="State" class="form-control" @bind="@Contact.State"/>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label">Zip</label>
+                    <input form="Zip" class="form-control" @bind="@Contact.Zip"/>
+                </div>
+            </div>
+            <ValidationMessage For="@(() => Contact.City)"/>
+            <ValidationMessage For="@(() => Contact.State)"/>
+            <ValidationMessage For="@(() => Contact.Zip)"/>
+        </div>
+        <div class="mb-3">
+            <div class="row">
+                <div class="col-md-2">
+                    <label class="form-label">Phone Number</label>
+                    <input form="Number" class="form-control" @bind="@Contact.Number"/>
+                </div>
+                <div class="col-md-1">
+                    <label class="form-label">Extension</label>
+                    <input form="Extension" class="form-control" @bind="@Contact.Extension"/>
+                </div>
+            </div>
+            <ValidationMessage For="@(() => Contact.Number)"/>
+            <ValidationMessage For="@(() => Contact.Extension)"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <div class="col-md-1">
+                <input form="Age" class="form-control" @bind="@Contact.Age"/>
+            </div>
+            <ValidationMessage For="@(() => Contact.Age)"/>
+        </div>
+        <div class="form-group mb-5">
+            <button type="submit" class="btn btn-primary">
+                <SaveIcon/> Save
+            </button>
+            <button class="btn btn-light" @onclick="Cancel">
+                <CancelIcon/> Cancel
+            </button>
+        </div>
+    </EditForm>
+}

@@ -8,6 +8,7 @@ using ContactManagement.Infrastructure;
 using ContactManagement.Infrastructure.Data;
 using FastEndpoints;
 using FastEndpoints.Swagger;
+using Microsoft.AspNetCore.Server.IISIntegration;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -28,6 +29,17 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 string? connectionString = builder.Configuration.GetConnectionString("SqliteConnection");
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(connectionString));
+
+builder.Services.AddCors(o =>
+{
+    o.AddPolicy("CorsPolicy", b =>
+    {
+        b.AllowAnyOrigin();
+        //b.AllowAnyHeader();
+        b.WithHeaders("Origin", "X-Requested-With", "Content-Type", "Accept");
+        b.AllowAnyMethod();
+    });
+});
 
 builder.Services.AddFastEndpoints(o =>
 {
@@ -52,9 +64,11 @@ builder.Services.Configure<ServiceConfig>(config =>
 
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
 {
-    containerBuilder.RegisterModule(new DefaultCoreModule());
+    //containerBuilder.RegisterModule(new DefaultCoreModule());
     containerBuilder.RegisterModule(new AutofacInfrastructureModule());
 });
+
+//builder.Services.AddAuthentication(IISDefaults.AuthenticationScheme);
 
 // Add services to the container.
 //builder.Services.AddAuthorization();
@@ -79,6 +93,7 @@ else
     app.UseHsts();
 }
 
+app.UseCors("CorsPolicy");
 app.UseFastEndpoints();
 app.UseSwaggerGen(); // FastEndpoints middleware
 app.UseHttpsRedirection();

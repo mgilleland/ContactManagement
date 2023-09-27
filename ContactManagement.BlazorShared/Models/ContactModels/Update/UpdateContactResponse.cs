@@ -2,10 +2,10 @@
 
 public class UpdateContactResponse
 {
-    public UpdateContactResponse(ContactRecord contact)
+    public UpdateContactResponse(ContactDto contact)
     {
         Contact = contact;
     }
 
-    public ContactRecord Contact { get; set; }
+    public ContactDto Contact { get; set; }
 }

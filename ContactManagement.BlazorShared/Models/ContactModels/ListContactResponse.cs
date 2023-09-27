@@ -1,8 +1,6 @@
-﻿using ContactManagement.Core.Aggregates;
-
-namespace ContactManagement.BlazorShared.Models.ContactModels;
+﻿namespace ContactManagement.BlazorShared.Models.ContactModels;
 
 public class ListContactResponse
 {
-    public List<Contact> Contacts { get; set; } = new();
+    public List<ContactDto> Contacts { get; set; } = new();
 }
