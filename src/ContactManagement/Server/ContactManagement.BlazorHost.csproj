@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Client\ContactManagement.Client.csproj" />
-    <ProjectReference Include="..\Shared\ContactManagement.Shared.csproj" />
   </ItemGroup>
 
 

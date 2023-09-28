@@ -10,11 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ardalis.HttpClientTestExtensions" Version="4.2.0" />
     <PackageReference Include="FluentAssertions" Version="6.12.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="7.0.11" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.11" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
+    <PackageReference Include="NSubstitute" Version="5.1.0" />
     <PackageReference Include="xunit" Version="2.5.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.1">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -27,14 +25,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ContactManagement.Api\ContactManagement.Api.csproj" />
-    <ProjectReference Include="..\ContactManagement.BlazorShared\ContactManagement.BlazorShared.csproj" />
-    <ProjectReference Include="..\ContactManagement.Core\ContactManagement.Core.csproj" />
+    <Folder Include="Contact\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contact\Create\" />
-    <Folder Include="Contact\Delete\" />
+    <ProjectReference Include="..\..\src\ContactManagement.Api\ContactManagement.Api.csproj" />
+    <ProjectReference Include="..\..\src\ContactManagement.Core\ContactManagement.Core.csproj" />
   </ItemGroup>
 
 </Project>
