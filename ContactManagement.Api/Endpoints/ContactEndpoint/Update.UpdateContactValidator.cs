@@ -17,12 +17,10 @@ public class UpdateContactValidator : Validator<UpdateContactRequest>
             .NotEmpty()
             .MaximumLength(Contact.MaxNameLength);
         RuleFor(c => c.Address.Line1)
-            .NotEmpty()
             .MaximumLength(AddressType.MaxAddressLength);
         RuleFor(c => c.Address.Line2)
             .MaximumLength(AddressType.MaxAddressLength);
         RuleFor(c => c.Address.City)
-            .NotEmpty()
             .MaximumLength(AddressType.MaxAddressLength);
         RuleFor(c => c.Address.State)
             .Matches(AddressType.StateValidator);
@@ -33,6 +31,7 @@ public class UpdateContactValidator : Validator<UpdateContactRequest>
         RuleFor(c => c.PhoneNumber.Extension)
             .Matches(PhoneNumberType.ExtensionValidator);
         RuleFor(c => c.Age)
+            .NotEmpty()
             .InclusiveBetween(0, Contact.MaxAge);
     }
 }

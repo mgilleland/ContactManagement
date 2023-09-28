@@ -16,14 +16,13 @@ namespace ContactManagement.Client
 
             var baseUrlConfig = new BaseUrlConfiguration();
             builder.Configuration.Bind(BaseUrlConfiguration.ConfigName, baseUrlConfig);
-            builder.Services.AddScoped(sp => baseUrlConfig);
+            builder.Services.AddScoped(_ => baseUrlConfig);
 
             // register the HttpClient and HttpService
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(baseUrlConfig.ApiBase) });
+            builder.Services.AddScoped(_ => new HttpClient { BaseAddress = new Uri(baseUrlConfig.ApiBase) });
             builder.Services.AddScoped<HttpService>();
 
             builder.Services.AddScoped<ContactService>();
-            builder.Services.AddScoped<ConfigurationService>();
 
             builder.Services.AddLogging(loggingBuilder => loggingBuilder.AddSerilog(dispose: true));
 

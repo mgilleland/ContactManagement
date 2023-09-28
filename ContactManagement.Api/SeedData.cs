@@ -28,7 +28,7 @@ public static class SeedData
         PopulateTestData(dbContext);
     }
 
-    private static void PopulateTestData(AppDbContext dbContext)
+    public static void PopulateTestData(AppDbContext dbContext)
     {
         foreach (var item in dbContext.Contacts)
         {

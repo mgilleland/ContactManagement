@@ -1,4 +1,5 @@
-﻿using Ardalis.SharedKernel;
+﻿using Ardalis.GuardClauses;
+using Ardalis.SharedKernel;
 
 namespace ContactManagement.Core.ValueObjects;
 
@@ -16,11 +17,11 @@ public class AddressType : ValueObject
 
     public AddressType(string line1, string? line2, string city, string state, string zip)
     {
-        Line1 = line1;
+        Line1 = Guard.Against.NullOrWhiteSpace(line1, nameof(line1));
         Line2 = line2;
-        City = city;
-        State = state;
-        Zip = zip;
+        City = Guard.Against.NullOrWhiteSpace(city, nameof(city));
+        State = Guard.Against.NullOrWhiteSpace(state, nameof(state));
+        Zip = Guard.Against.NullOrWhiteSpace(zip, nameof(zip));
     }
 
     public override string ToString()

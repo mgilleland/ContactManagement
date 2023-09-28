@@ -24,7 +24,7 @@ else
         <div class="mb-3">
             <label class="form-label">First Name</label>
             <div class="col-md-6">
-                <input form="FirstName" class="form-control" @bind="@Contact.FirstName"/>
+                <input form="FirstName" class="form-control" @bind="@Contact!.FirstName"/>
             </div>
             <ValidationMessage For="@(() => Contact.FirstName)"/>
         </div>

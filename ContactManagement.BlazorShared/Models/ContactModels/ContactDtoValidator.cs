@@ -8,8 +8,12 @@ public class ContactDtoValidator : AbstractValidator<ContactDto>
 {
     public ContactDtoValidator()
     {
-        RuleFor(c => c.FirstName).NotEmpty().MaximumLength(Contact.MaxNameLength);
-        RuleFor(c => c.LastName).NotEmpty().MaximumLength(Contact.MaxNameLength);
+        RuleFor(c => c.FirstName)
+            .NotEmpty()
+            .MaximumLength(Contact.MaxNameLength);
+        RuleFor(c => c.LastName)
+            .NotEmpty()
+            .MaximumLength(Contact.MaxNameLength);
         RuleFor(c => c.Line1)
             .NotEmpty()
             .MaximumLength(AddressType.MaxAddressLength);

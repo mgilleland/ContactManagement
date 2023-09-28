@@ -3,16 +3,12 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using ContactManagement.Api;
 using ContactManagement.BlazorShared.Models.ContactModels.Create;
-using ContactManagement.Core;
 using ContactManagement.Infrastructure;
 using ContactManagement.Infrastructure.Data;
 using FastEndpoints;
 using FastEndpoints.Swagger;
-using Microsoft.AspNetCore.Server.IISIntegration;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-
-//TODO: Clean this up
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,7 +31,6 @@ builder.Services.AddCors(o =>
     o.AddPolicy("CorsPolicy", b =>
     {
         b.AllowAnyOrigin();
-        //b.AllowAnyHeader();
         b.WithHeaders("Origin", "X-Requested-With", "Content-Type", "Accept");
         b.AllowAnyMethod();
     });
@@ -47,7 +42,6 @@ builder.Services.AddFastEndpoints(o =>
     o.Assemblies = new[] {typeof(CreateContactRequest).Assembly};
 });
 
-//builder.Services.AddFastEndpointsApiExplorer();
 builder.Services.SwaggerDocument(o =>
 {
     o.ShortSchemaNames = true;
@@ -58,24 +52,14 @@ builder.Services.Configure<ServiceConfig>(config =>
 {
     config.Services = new List<ServiceDescriptor>(builder.Services);
 
-    // optional - default path to view services is /listallservices - recommended to choose your own path
+    // optional - default path to view services is /listallservices
     config.Path = "/listservices";
 });
 
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
 {
-    //containerBuilder.RegisterModule(new DefaultCoreModule());
     containerBuilder.RegisterModule(new AutofacInfrastructureModule());
 });
-
-//builder.Services.AddAuthentication(IISDefaults.AuthenticationScheme);
-
-// Add services to the container.
-//builder.Services.AddAuthorization();
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-//builder.Services.AddEndpointsApiExplorer();
-//builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -84,8 +68,6 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseShowAllServicesMiddleware(); // see https://github.com/ardalis/AspNetCoreStartupServices
-    //app.UseSwagger();
-    //app.UseSwaggerUI();
 }
 else
 {
@@ -118,3 +100,8 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.Run();
+
+// Make the implicit Program.cs class public, so integration tests can reference the correct assembly for host building
+public partial class Program
+{
+}

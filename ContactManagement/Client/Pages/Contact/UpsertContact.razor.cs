@@ -18,7 +18,7 @@ public partial class UpsertContact
     [Inject]
     public required NavigationManager Navigation { get; set; }
 
-    public ContactDto? Contact { get; set; }
+    public ContactDto? Contact { get; set; } = new();
 
     private string _title = "Add";
     private bool _isContactNotFound;
@@ -35,10 +35,6 @@ public partial class UpsertContact
             {
                 _isContactNotFound = true;
             }
-        }
-        else
-        {
-            Contact = new ContactDto();
         }
     }
 

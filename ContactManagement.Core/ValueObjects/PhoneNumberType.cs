@@ -1,4 +1,5 @@
-﻿using Ardalis.SharedKernel;
+﻿using Ardalis.GuardClauses;
+using Ardalis.SharedKernel;
 using System.Text;
 
 namespace ContactManagement.Core.ValueObjects;
@@ -25,7 +26,7 @@ public class PhoneNumberType : ValueObject
     public PhoneNumberType(string countryCode, string phoneNumber, string? extension)
     {
         //CountryCode = "1";  // Country Code is hard coded to 1 for now to enforce US only numbers
-        PhoneNumber = phoneNumber;
+        PhoneNumber = Guard.Against.NullOrWhiteSpace(phoneNumber, nameof(phoneNumber));
         Extension = extension;
     }
 
