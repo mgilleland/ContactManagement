@@ -1,5 +1,43 @@
 ﻿@page "/"
 
+<base target="_blank" rel="noopener noreferrer">
+
 <h1>Contact Management Home</h1>
 
-This page will be updated with information about the project and the technologies used
+<p>This is a sample project used to demonstrate a Blazor front-end using a REST API for the back-end. 
+    It is a simple Contact Management system that only performs CRUD operations. 
+    The design of the API uses many DDD concepts that in reality are overkill for such a simple model with very little business logic. 
+    However, the design patterns were chosen to demonstrate how a more complex solution might be architected with DDD.
+</p>
+
+<p>To run the project in Visual Studio, clone the repo and open the ContactManagement.sln solution. 
+    Configure the startup projects so that ContactManagement.Api and ContactManagement.BlazorHost are set to start.
+</p>
+
+<p>More information about the technologies used:</p>
+<ul>
+    <li>Built with C# on .Net Core 7</li>
+    <li>UI is built with <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor">Blazor</a></li>
+    <li>Data stored in SQLite</li>
+    <li>Uses a <a href="https://github.com/ardalis/CleanArchitecture">Clean Architecture</a> project design</li>
+    <li>Notable libraries used:</li>
+    <ul>
+        <li><a href="https://fast-endpoints.com/">Fast Endpoints</a> are used with the <a href="https://deviq.com/design-patterns/repr-design-pattern">REPR pattern</a> in place of controllers</li>
+        <li><a href="https://github.com/FluentValidation/FluentValidation">Fluent Validation</a></li>
+        <li><a href="https://github.com/fluentassertions/fluentassertions">Fluent Assertions</a></li>
+        <li><a href="https://nsubstitute.github.io/">NSubstitute</a></li>
+        <li><a href="https://github.com/ardalis/Ardalis.SharedKernel">Ardalis.SharedKernel</a></li>
+    </ul>
+</ul>
+
+<p>This is just a demonstration project and there is additional functionality and areas of improvement that would need to to be addressed before considering it production ready:</p>
+<ul>
+    <li>There is no paging or sorting in the contact list</li>
+    <li>There is no search capability</li>
+    <li>Formatting prompts for the zip code and phone number would be helpful</li>
+    <li>Validate the state against a list of state codes</li>
+    <li>Address lookup</li>
+    <li>Alternative formats for international addresses and phone numbers</li>
+    <li>Toast alerts to notify the user of actions performed</li>
+    <li>Improve error messaging and logging in the UI</li>
+</ul>
