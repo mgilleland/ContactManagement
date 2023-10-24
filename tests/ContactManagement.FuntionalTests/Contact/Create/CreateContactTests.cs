@@ -1,6 +1,5 @@
 ﻿using Ardalis.HttpClientTestExtensions;
 using ContactManagement.BlazorShared.Models.ContactModels.Create;
-using ContactManagement.Core.ValueObjects;
 using FluentAssertions;
 
 namespace ContactManagement.FunctionalTests.Contact.Create;
