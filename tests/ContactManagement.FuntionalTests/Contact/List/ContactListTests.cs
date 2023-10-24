@@ -18,7 +18,7 @@ public class ContactListTests : IClassFixture<CustomWebApplicationFactory<Progra
     [Fact]
     public async Task List_returns_seed_contacts()
     {
-        var result = await _client.GetAndDeserializeAsync<ListContactResponse>("/Contacts");
+        var result = await _client.GetAndDeserializeAsync<ListContactResponse>("/Contact");
 
         result.Should().NotBeNull();
         result.Contacts.Count.Should().BeGreaterOrEqualTo(2);

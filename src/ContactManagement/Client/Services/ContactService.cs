@@ -19,29 +19,29 @@ namespace ContactManagement.Client.Services
 
         public async Task<ContactDto?> CreateAsync(CreateContactRequest contact)
         {
-            return (await _httpService.HttpPostAsync<CreateContactResponse>("contacts", contact))?.Contact;
+            return (await _httpService.HttpPostAsync<CreateContactResponse>("contact", contact))?.Contact;
         }
 
         public async Task<ContactDto?> UpdateAsync(UpdateContactRequest contact)
         {
-            return (await _httpService.HttpPutAsync<UpdateContactResponse>($"contacts/{contact.ContactId}", contact))?.Contact;
+            return (await _httpService.HttpPutAsync<UpdateContactResponse>($"contact/{contact.ContactId}", contact))?.Contact;
         }
 
         public async Task DeleteAsync(DeleteContactRequest request)
         {
-            await _httpService.HttpDeleteAsync($"contacts", request.ContactId);
+            await _httpService.HttpDeleteAsync($"contact", request.ContactId);
         }
 
         public async Task<ContactDto?> GetByIdAsync(int contactId)
         {
-            return (await _httpService.HttpGetAsync<GetContactByIdResponse>($"contacts/{contactId}"))?.Contact;
+            return (await _httpService.HttpGetAsync<GetContactByIdResponse>($"contact/{contactId}"))?.Contact;
         }
 
         public async Task<List<ContactDto>?> ListAsync()
         {
             _logger.LogInformation("Fetching contacts from API.");
 
-            var contacts = (await _httpService.HttpGetAsync<ListContactResponse>($"contacts"))?.Contacts;
+            var contacts = (await _httpService.HttpGetAsync<ListContactResponse>($"contact"))?.Contacts;
 
             return contacts;
         }

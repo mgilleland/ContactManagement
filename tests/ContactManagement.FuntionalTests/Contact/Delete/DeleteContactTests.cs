@@ -2,7 +2,6 @@
 using ContactManagement.BlazorShared.Models.ContactModels.Create;
 using ContactManagement.BlazorShared.Models.ContactModels.Delete;
 using ContactManagement.BlazorShared.Models.ContactModels.GetById;
-using ContactManagement.Core.ValueObjects;
 using FluentAssertions;
 
 namespace ContactManagement.FunctionalTests.Contact.Delete;
@@ -24,14 +23,19 @@ public class DeleteContactTests : IClassFixture<CustomWebApplicationFactory<Prog
         {
             FirstName = "First",
             LastName = "Last",
-            Address = new AddressType("Line1", "Line2", "City", "ST", "12345"),
-            PhoneNumber = new PhoneNumberType(string.Empty, "1234567890", "123"),
+            Line1 = "Line1",
+            Line2 = "Line2",
+            City = "City",
+            State = "ST",
+            Zip = "12345",
+            PhoneNumber = "1234567890",
+            Extension = "123",
             Age = 21
         };
 
         var requestContent = StringContentHelpers.FromModelAsJson(createRequest);
 
-        var createResult = await _client.PostAndDeserializeAsync<CreateContactResponse>("/Contacts", requestContent);
+        var createResult = await _client.PostAndDeserializeAsync<CreateContactResponse>("/Contact", requestContent);
 
         createResult.Should().NotBeNull();
         createResult.Contact.Should().NotBeNull();

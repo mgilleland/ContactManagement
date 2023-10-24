@@ -1,6 +1,7 @@
 ﻿using ContactManagement.BlazorShared.Models.ContactModels;
 using ContactManagement.BlazorShared.Models.ContactModels.Update;
 using ContactManagement.Core.Aggregates;
+using ContactManagement.Core.ValueObjects;
 using FastEndpoints;
 
 namespace ContactManagement.Api.Endpoints.ContactEndpoint;
@@ -8,7 +9,9 @@ namespace ContactManagement.Api.Endpoints.ContactEndpoint;
 public class UpdateContactMapper : Mapper<UpdateContactRequest, UpdateContactResponse, Contact>
 {
     public override Contact ToEntity(UpdateContactRequest request) => new(request.FirstName, request.LastName,
-        request.Address, request.PhoneNumber, request.Age);
+        new AddressType(request.Line1, request.Line2, request.City, request.State, request.Zip),
+        new PhoneNumberType(string.Empty, request.PhoneNumber, request.Extension),
+        request.Age);
 
     public override UpdateContactResponse FromEntity(Contact c) => new(
         new ContactDto

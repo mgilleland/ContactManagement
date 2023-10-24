@@ -30,6 +30,6 @@ public class Create : Endpoint<CreateContactRequest, CreateContactResponse, Crea
     {
         var contact = Map.ToEntity(request);
         var newContact = await _repository.AddAsync(contact, cancellationToken);
-        Response = Map.FromEntity(newContact);
+        await SendCreatedAtAsync<GetById>(newContact.Id, Map.FromEntity(newContact), cancellation: cancellationToken);
     }
 }

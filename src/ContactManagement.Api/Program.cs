@@ -7,6 +7,7 @@ using ContactManagement.Infrastructure;
 using ContactManagement.Infrastructure.Data;
 using FastEndpoints;
 using FastEndpoints.Swagger;
+using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -21,6 +22,9 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
     options.CheckConsentNeeded = _ => true;
     options.MinimumSameSitePolicy = SameSiteMode.None;
 });
+
+builder.Services.AddHttpLogging(opts => opts.LoggingFields = HttpLoggingFields.Request);
+builder.Logging.AddFilter("Microsoft.AspNetCore.HttpLogging", LogLevel.Information);
 
 string? connectionString = builder.Configuration.GetConnectionString("SqliteConnection");
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -66,6 +70,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseHttpLogging();
     app.UseDeveloperExceptionPage();
     app.UseShowAllServicesMiddleware(); // see https://github.com/ardalis/AspNetCoreStartupServices
 }

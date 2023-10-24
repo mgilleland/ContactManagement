@@ -7,7 +7,7 @@ namespace ContactManagement.Api.Endpoints.ContactEndpoint;
 
 public class GetContactByIdMapper : Mapper<GetContactByIdRequest, GetContactByIdResponse, Contact>
 {
-    public const string Route = "/Contacts/{ContactId:int}";
+    public const string Route = "/Contact/{ContactId:int}";
     public static string BuildRoute(int contactId) => Route.Replace("{contactId:int}", contactId.ToString());
 
     public override GetContactByIdResponse FromEntity(Contact c) => new(

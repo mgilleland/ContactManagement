@@ -199,6 +199,6 @@ public class ContactTests
                 new PhoneNumberType("", "1234567890", ""), age);
         };
 
-        act.Should().Throw<ArgumentException>().WithParameterName("age");
+        act.Should().Throw<ArgumentException>().WithParameterName(nameof(age));
     }
 }

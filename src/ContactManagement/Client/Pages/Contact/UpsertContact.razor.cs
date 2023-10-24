@@ -47,8 +47,13 @@ public partial class UpsertContact
                 ContactId = Id.Value,
                 FirstName = Contact?.FirstName!,
                 LastName = Contact?.LastName!,
-                Address = new AddressType(Contact?.Line1!, Contact?.Line2, Contact?.City!, Contact?.State!, Contact?.Zip!),
-                PhoneNumber = new PhoneNumberType(string.Empty, Contact?.Number!, Contact?.Extension!),
+                Line1 = Contact?.Line1!,
+                Line2 = Contact?.Line2!,
+                City = Contact?.City!,
+                State = Contact?.State!,
+                Zip = Contact?.Zip!,
+                PhoneNumber = Contact?.Number!,
+                Extension = Contact?.Extension!,
                 Age = Contact!.Age
             };
 
@@ -60,8 +65,13 @@ public partial class UpsertContact
             {
                 FirstName = Contact?.FirstName!,
                 LastName = Contact?.LastName!,
-                Address = new AddressType(Contact?.Line1!, Contact?.Line2!, Contact?.City!, Contact?.State!, Contact?.Zip!),
-                PhoneNumber = new PhoneNumberType(string.Empty, Contact?.Number!, Contact?.Extension!),
+                Line1 = Contact?.Line1!,
+                Line2 = Contact?.Line2!,
+                City = Contact?.City!,
+                State = Contact?.State!,
+                Zip = Contact?.Zip!,
+                PhoneNumber = Contact?.Number!,
+                Extension = Contact?.Extension!,
                 Age = Contact!.Age
             };
 

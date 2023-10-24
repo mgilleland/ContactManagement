@@ -23,14 +23,19 @@ public class UpdateContactTests : IClassFixture<CustomWebApplicationFactory<Prog
         {
             FirstName = "First",
             LastName = "Last",
-            Address = new AddressType("Line1", "Line2", "City", "ST", "12345"),
-            PhoneNumber = new PhoneNumberType(string.Empty, "1234567890", "123"),
+            Line1 = "Line1",
+            Line2 = "Line2",
+            City = "City",
+            State = "ST",
+            Zip = "12345",
+            PhoneNumber = "1234567890",
+            Extension = "123",
             Age = 21
         };
 
         var requestContent = StringContentHelpers.FromModelAsJson(createRequest);
 
-        var createResult = await _client.PostAndDeserializeAsync<CreateContactResponse>("/Contacts", requestContent);
+        var createResult = await _client.PostAndDeserializeAsync<CreateContactResponse>("/Contact", requestContent);
 
         createResult.Should().NotBeNull();
         createResult.Contact.Should().NotBeNull();
@@ -42,8 +47,13 @@ public class UpdateContactTests : IClassFixture<CustomWebApplicationFactory<Prog
         {
             FirstName = "newFirst",
             LastName = "newLast",
-            Address = new AddressType("newLine1", "newLine2", "newCity", "XX", "54321"),
-            PhoneNumber = new PhoneNumberType(string.Empty, "9876543210", "321"),
+            Line1 = "newLine1",
+            Line2 = "newLine2",
+            City = "newCity",
+            State = "XX",
+            Zip = "54321",
+            PhoneNumber = "9876543210",
+            Extension = "321",
             Age = 1
         };
 

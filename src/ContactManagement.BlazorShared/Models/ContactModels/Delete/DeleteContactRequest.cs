@@ -2,8 +2,8 @@
 
 public class DeleteContactRequest
 {
-    public const string Route = "/Contacts/{ContactId:int}";
+    public const string Route = "/Contact/{ContactId:int}";
     public static string BuildRoute(int contactId) => Route.Replace("{ContactId:int}", contactId.ToString());
 
-    public int ContactId { get; set; }
+    public int ContactId { get; init; }
 }

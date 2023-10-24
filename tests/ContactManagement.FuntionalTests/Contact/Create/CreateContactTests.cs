@@ -21,14 +21,19 @@ public class CreateContactTests : IClassFixture<CustomWebApplicationFactory<Prog
         {
             FirstName = "First",
             LastName = "Last",
-            Address = new AddressType("Line1", "Line2", "City", "ST", "12345"),
-            PhoneNumber = new PhoneNumberType(string.Empty, "1234567890", "123"),
+            Line1 = "Line1",
+            Line2 = "Line2",
+            City = "City",
+            State = "ST",
+            Zip = "12345",
+            PhoneNumber = "1234567890",
+            Extension = "123",
             Age = 21
         };
 
         var content = StringContentHelpers.FromModelAsJson(request);
 
-        var result = await _client.PostAndDeserializeAsync<CreateContactResponse>("/Contacts", content);
+        var result = await _client.PostAndDeserializeAsync<CreateContactResponse>("/Contact", content);
 
         result.Should().NotBeNull();
         result.Contact.Should().NotBeNull();

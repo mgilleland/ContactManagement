@@ -1,15 +1,18 @@
-﻿using ContactManagement.Core.ValueObjects;
-
-namespace ContactManagement.BlazorShared.Models.ContactModels.Create;
+﻿namespace ContactManagement.BlazorShared.Models.ContactModels.Create;
 
 public class CreateContactRequest
 {
-    public const string Route = "/Contacts";
+    public const string Route = "/Contact";
 
-    public required string FirstName { get; set; }
-    public required string LastName { get; set; }
+    public required string FirstName { get; init; }
+    public required string LastName { get; init; }
 
-    public required AddressType Address { get; set; }
-    public required PhoneNumberType PhoneNumber { get; set; }
-    public int Age { get; set; }
+    public required string Line1 { get; init; }
+    public string? Line2 { get; init; }
+    public required string City { get; init; }
+    public required string State { get; init; }
+    public required string Zip { get; init; }
+    public required string PhoneNumber { get; init; }
+    public string? Extension { get; init; }
+    public int Age { get; init; }
 }

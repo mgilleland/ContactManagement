@@ -16,7 +16,7 @@ public class List : EndpointWithoutRequest<ListContactResponse, ContactMapper>
 
     public override void Configure()
     {
-        Get("/Contacts");
+        Get("/Contact");
         AllowAnonymous();
     }
 

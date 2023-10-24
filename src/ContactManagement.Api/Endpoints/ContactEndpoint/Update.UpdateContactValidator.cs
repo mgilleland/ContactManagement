@@ -16,19 +16,22 @@ public class UpdateContactValidator : Validator<UpdateContactRequest>
         RuleFor(c => c.LastName)
             .NotEmpty()
             .MaximumLength(Contact.MaxNameLength);
-        RuleFor(c => c.Address.Line1)
+        RuleFor(c => c.Line1)
+            .NotEmpty()
             .MaximumLength(AddressType.MaxAddressLength);
-        RuleFor(c => c.Address.Line2)
+        RuleFor(c => c.Line2)
             .MaximumLength(AddressType.MaxAddressLength);
-        RuleFor(c => c.Address.City)
+        RuleFor(c => c.City)
+            .NotEmpty()
             .MaximumLength(AddressType.MaxAddressLength);
-        RuleFor(c => c.Address.State)
+        RuleFor(c => c.State)
             .Matches(AddressType.StateValidator);
-        RuleFor(c => c.Address.Zip)
+        RuleFor(c => c.Zip)
             .Matches(AddressType.ZipValidator);
-        RuleFor(c => c.PhoneNumber.PhoneNumber)
+        RuleFor(c => c.PhoneNumber)
+            .NotEmpty()
             .Matches(PhoneNumberType.PhoneNumberValidator);
-        RuleFor(c => c.PhoneNumber.Extension)
+        RuleFor(c => c.Extension)
             .Matches(PhoneNumberType.ExtensionValidator);
         RuleFor(c => c.Age)
             .NotEmpty()

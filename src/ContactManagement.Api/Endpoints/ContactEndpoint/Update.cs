@@ -1,6 +1,7 @@
 ﻿using Ardalis.SharedKernel;
 using ContactManagement.BlazorShared.Models.ContactModels.Update;
 using ContactManagement.Core.Aggregates;
+using ContactManagement.Core.ValueObjects;
 using FastEndpoints;
 
 namespace ContactManagement.Api.Endpoints.ContactEndpoint;
@@ -45,15 +46,19 @@ public class Update : Endpoint<UpdateContactRequest, UpdateContactResponse, Upda
             isUpdateRequired = true;
         }
 
-        if (existingContact.Address != request.Address)
+        var requestAddress = new AddressType(request.Line1, request.Line2, request.City, request.State, request.Zip);
+
+        if (existingContact.Address != requestAddress)
         {
-            existingContact.UpdateAddress(request.Address);
+            existingContact.UpdateAddress(requestAddress);
             isUpdateRequired = true;
         }
 
-        if (existingContact.PhoneNumber != request.PhoneNumber)
+        var requestPhoneNumber = new PhoneNumberType(string.Empty, request.PhoneNumber, request.Extension);
+
+        if (existingContact.PhoneNumber != requestPhoneNumber)
         {
-            existingContact.UpdatePhoneNumber(request.PhoneNumber);
+            existingContact.UpdatePhoneNumber(requestPhoneNumber);
             isUpdateRequired = true;
         }
 

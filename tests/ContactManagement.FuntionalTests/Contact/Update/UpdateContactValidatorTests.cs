@@ -15,8 +15,12 @@ public class UpdateContactValidatorTests
         {
             FirstName = string.Empty,
             LastName = string.Empty,
-            Address = new AddressType("Line1", "Line2", "City", "ST", "12345"),
-            PhoneNumber = new PhoneNumberType(string.Empty, "1234567890", null)
+            Line1 = "Line1",
+            Line2 = "Line2",
+            City = "City",
+            State = "ST",
+            Zip = "12345",
+            PhoneNumber = "1234567890"
         };
 
         var result = _sut.TestValidate(request);
@@ -33,21 +37,21 @@ public class UpdateContactValidatorTests
         {
             FirstName = new string('x', Core.Aggregates.Contact.MaxNameLength + 1),
             LastName = new string('x', Core.Aggregates.Contact.MaxNameLength + 1),
-            Address = new AddressType(
-                new string('x', AddressType.MaxAddressLength + 1),
-                new string('x', AddressType.MaxAddressLength + 1),
-                 new string('x', AddressType.MaxAddressLength + 1),
-                "ST", "12345"),
-            PhoneNumber = new PhoneNumberType(string.Empty, "1234567890", null)
+            Line1 = new string('x', AddressType.MaxAddressLength + 1),
+            Line2 = new string('x', AddressType.MaxAddressLength + 1),
+            City = new string('x', AddressType.MaxAddressLength + 1),
+            State = "ST",
+            Zip = "12345",
+            PhoneNumber = "1234567890"
         };
 
         var result = _sut.TestValidate(request);
 
         result.ShouldHaveValidationErrorFor(v => v.FirstName);
         result.ShouldHaveValidationErrorFor(v => v.LastName);
-        result.ShouldHaveValidationErrorFor(v => v.Address.Line1);
-        result.ShouldHaveValidationErrorFor(v => v.Address.Line2);
-        result.ShouldHaveValidationErrorFor(v => v.Address.City);
+        result.ShouldHaveValidationErrorFor(v => v.Line1);
+        result.ShouldHaveValidationErrorFor(v => v.Line2);
+        result.ShouldHaveValidationErrorFor(v => v.City);
     }
 
     [Fact]
@@ -57,16 +61,21 @@ public class UpdateContactValidatorTests
         {
             FirstName = "First",
             LastName = "Last",
-            Address = new AddressType("Line1", "Line2", "City", "xxx", "xxx"),
-            PhoneNumber = new PhoneNumberType(string.Empty, "xxx", "xxx")
+            Line1 = "Line1",
+            Line2 = "Line2",
+            City = "City",
+            State = "xxx",
+            Zip = "xxx",
+            PhoneNumber = "xxx",
+            Extension = "xxx"
         };
 
         var result = _sut.TestValidate(request);
 
-        result.ShouldHaveValidationErrorFor(v => v.Address.State);
-        result.ShouldHaveValidationErrorFor(v => v.Address.Zip);
-        result.ShouldHaveValidationErrorFor(v => v.PhoneNumber.PhoneNumber);
-        result.ShouldHaveValidationErrorFor(v => v.PhoneNumber.Extension);
+        result.ShouldHaveValidationErrorFor(v => v.State);
+        result.ShouldHaveValidationErrorFor(v => v.Zip);
+        result.ShouldHaveValidationErrorFor(v => v.PhoneNumber);
+        result.ShouldHaveValidationErrorFor(v => v.Extension);
     }
 
     [Theory]
@@ -78,8 +87,12 @@ public class UpdateContactValidatorTests
         {
             FirstName = "First",
             LastName = "Last",
-            Address = new AddressType("Line1", "Line2", "City", "ST", "12345"),
-            PhoneNumber = new PhoneNumberType(string.Empty, "1234567890", null),
+            Line1 = "Line1",
+            Line2 = "Line2",
+            City = "City",
+            State = "ST",
+            Zip = "12345",
+            PhoneNumber = "1234567890",
             Age = age
         };
 
