@@ -1,9 +1,7 @@
 using Ardalis.ListStartupServices;
-using Autofac;
-using Autofac.Extensions.DependencyInjection;
+using Ardalis.SharedKernel;
 using ContactManagement.Api;
 using ContactManagement.BlazorShared.Models.ContactModels.Create;
-using ContactManagement.Infrastructure;
 using ContactManagement.Infrastructure.Data;
 using FastEndpoints;
 using FastEndpoints.Swagger;
@@ -12,8 +10,6 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 
 builder.Host.UseSerilog((_, config) => config.ReadFrom.Configuration(builder.Configuration));
 
@@ -60,10 +56,9 @@ builder.Services.Configure<ServiceConfig>(config =>
     config.Path = "/listservices";
 });
 
-builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
-{
-    containerBuilder.RegisterModule(new AutofacInfrastructureModule());
-});
+// Add the EfRepository service
+builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+builder.Services.AddScoped(typeof(IReadRepository<>), typeof(EfRepository<>));
 
 var app = builder.Build();
 
